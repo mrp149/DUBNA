@@ -102,7 +102,8 @@ command/nrcom
 
 command/rwiocom
 
-# cross/  - кросс система для МКБ 
+# cross/
+ кросс система для МКБ 
 
 cross/assem.txt
 
@@ -208,6 +209,7 @@ d_besm6/t.for
 d_besm6/topc
 
 # dis664/ 
+содержание диска 664, части кросс системы
 
 dis664/arbtest
 
@@ -286,6 +288,7 @@ dis664/tktest4
 dis664/xemtest.mak
 
 # dis705/ 
+содержание диска 705, части кроос системы
 
 dis705/assem.doc
 
@@ -325,6 +328,7 @@ dis705/workin.ext
 
 
 # disser/ 
+Сапожникова Т.
 
 disser/a.chi
 
@@ -386,9 +390,13 @@ disser/z.chi
 
 # deb_besm/
 
+тексты системы 
+
 dub_besm/dubna.dd
+диспетчер, но не очень ясно какой именно 
 
 dub_besm/dubna.ms
+мониторка 
 
 # i80870/ 
 
