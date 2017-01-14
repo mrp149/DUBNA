@@ -70,14 +70,15 @@ besmmons/system1.txt
 besmmons/system2.txt
 
 # besmtask/
-
+вот тут части мониторки без которых не подняться
+ 
 besmtask/exfor.vv
 
-besmtask/loader.txt
+besmtask/loader.txt  - Силинский REDUOL! большая удача, что есть в текстах  
 
-besmtask/loadload.txt
+besmtask/loadload.txt - резидентный загрузчик
 
-besmtask/madlen.txt
+besmtask/madlen.txt  - Мадлен 2 (имя Мадлен придумал Волков, aka MAde in Dubna and LENingard) 
 
 besmtask/task11.ts1
 
@@ -101,7 +102,7 @@ command/nrcom
 
 command/rwiocom
 
-# cross/
+# cross/  - кросс система для МКБ 
 
 cross/assem.txt
 
@@ -397,6 +398,8 @@ i8080/i8080.txt
 
 
 # kim/
+  простенькие программы для системного процессора, которые были написаны для отладки
+ интефейсов DPM (Dual Port Memory), процессор тогда еще был не живой     
 
 kim/aaa.asm
 
