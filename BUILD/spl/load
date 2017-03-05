@@ -1,0 +1,27 @@
+#! /bin/sh 
+# delaem vremennuyu lentu
+rm -i ~/.besm6/1999
+touch ~/.besm6/1999
+rm x??
+
+cat $1 $2 $3 $4 $5 $6 $7 $8 $9 > xzz
+
+split -l 15000 xzz
+
+cat HD0 > xzj
+cat xaa >> xzj
+cat FT1 >> xzj
+
+dispak xzj
+
+for a in xa[b-z]
+do
+cat HD1 > xzj
+cat $a >> xzj
+cat FT1 >> xzj
+
+dispak xzj
+
+done
+
+dispak HD2
