@@ -1,7 +1,7 @@
 #! /bin/sh
 # Staging OS Dubna sources in Dispak for the bootstrap  
 # Copyright 2017, by M.Popov
-#
+# DD source
 set -x
 # besm6/besm6.github.io/sources/dubna/besmdisp
 REPO=`pwd`/../besmdisp/*.dd*
@@ -57,7 +57,6 @@ COMMENTS ARE IN THE DD SOURCE CODE
 *MADLEN(L=FBG,I=66100,SТЕХТ=FRЕQ300)
 *tcatalog
 *to perso:66000,77
-*call pcatalog:66000
 *end file
 \`\`\`\`\`\`
 еконец
