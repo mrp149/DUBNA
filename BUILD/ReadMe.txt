@@ -42,7 +42,7 @@
 ### THE FOLLLOWING IS CORREPONDING NUMBERS IN DISPAK:
 # Please NOTE, the FIXED TAPE NUMBERS are used in the
 # bootstrap sequence and scripts. All these tapes are 
-# generated during the bootstrap and in used in the
+# generated during the bootstrap and in used by the
 # bootstrap scripts.
 # 
 # All generated tapes have the following format:
