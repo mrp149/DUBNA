@@ -73,7 +73,7 @@
 
 # MS
 1200 - Мониторная Система
-1201 - Мониторная Система (orig)
+1201 - Мониторная Система (base line)
 1211 - task11  (!compilation errors in FOREX)
 1221 - libra21 
 1223 - libra23 (!compilation errors in FOREX)
@@ -82,7 +82,7 @@
 
 # DD
 1400 - Диспетчер
-1401 - Диспетчер (orig)
+1401 - Диспетчер (base line)
 1500 - macro67.dd1
 1600 - tasksav.dd2
 1700 - nrespost.dd3
