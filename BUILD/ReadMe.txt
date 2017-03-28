@@ -4,28 +4,30 @@
 # Copyright, 2017 by M.Popov 
 # 
 # Rev A. 2017/03/03
-
+# Rev B. 2017/03/27
 #
 ##### TAPE NUMBERS AND FORMATS
 
 #
-### LABELS:
+### TAPE LABELS:
 # The following tape labels are fixed in OS Dubna
-# these lebels can be tape labels or named tape 
-# models on disks.
+# these lebels can be labeldd tapes or named tape 
+# models on disk.
 
 # Allocations in DD:
 
- 1/ROLLIB
- 1/D73INP
- 3/D73OUT
- 5/D73LIB
- 6/D73STA
- 7/M
- 8/CATALO
- 9/MONSYS
-10/USESTA
-11/LINBUF
+ 1/ROLLIB    - roll tracks
+ 1/D73INP    - input buffer
+ 3/D73OUT    - output buffer
+ 5/D73LIB    - STL
+ 6/D73STA    - system logs and statisitc
+ 7/M         - Multitype
+ 8/CATALO    - grafor out buffer
+ 9/MONSYS    - system objects
+10/USESTA    - user logs and statistic
+11/LINBUF    - screen editid buffers	
+12/LIBRAR    - library objects
+37/LIBRAR    - library objects
 
 # Allocations in MS
 
@@ -61,9 +63,9 @@
 # 1900-1999 Temp/Scratch tapes 
 
 # original tape images (as is)
-   9 - monsys
-  12 - librar12
-  37 - librar37
+   9 - monsys-9
+  12 - librar-12
+  37 - librar-37
 
 # Compilers
 1000 - Мadlen-2
