@@ -1,3 +1,5 @@
+27/03/2017
+
 # besm6/
 
 besm6/kt2.bin
@@ -10,18 +12,15 @@ besm6/os6.bin
 
 besm6/os.txt
 
-# besmdisp/
+; besmdisp/  - DD splited in sections, it the same as dubna.dd
 
 besmdisp/macro67.dd1
-
 besmdisp/nrespost.dd3
-
 besmdisp/sluga.dd4
-
 besmdisp/tasksav.dd2
 
 
-# besml21/
+; besml21/  - the sources of library 21 
 
 besml21/assem.doc
 
@@ -29,11 +28,9 @@ besml21/kermit.ftn
 
 besml21/kermit.pas
 
-besml21/libra211.l21
-
-besml21/libra212.l21
-
-besml21/libra213.l21
+besml21/libra211.l21  - library 21 in sections
+besml21/libra212.l21  - library 21 in sections
+besml21/libra213.l21  - library 21 in sections
 
 besml21/loader.doc
 
@@ -41,48 +38,39 @@ besml21/loader.txt
 
 besml21/microb.doc
 
-# besml23/
+; besml23/
 
-besml23/carith.ari
+besml23/carith.ari   
 
-besml23/compo.tst
+besml23/compo.tst     - Fortan comiler arithmetic's test 
 
-besml23/dispac23.l23
-
-besml23/lib23f.l23
-
-besml23/lib23i.l23
-
-besml23/lib23t.l23
-
-besml23/lib23v.l23
+besml23/dispac23.l23  - library 23 (terminal intefaces)
+besml23/lib23f.l23    - library 23
+besml23/lib23i.l23    - library 23 
+besml23/lib23t.l23    - library 23 
+besml23/lib23v.l23    - library 23 
 
 besml23/microb.mas
 
-# besmmons/
+; besmmons/   - MS Dubna in sections
 
 besmmons/project.out
 
 besmmons/project.txt
 
-besmmons/system1.txt
+besmmons/system1.txt  - MS Dubna
+besmmons/system2.txt  - MS Dubna
 
-besmmons/system2.txt
-
-# besmtask/
-вот тут части мониторки без которых не подняться
+; besmtask/ - вот тут части мониторки без которых не подняться
  
 besmtask/exfor.vv
 
-besmtask/loader.txt  - Силинский REDUOL! большая удача, что есть в текстах  
-
+besmtask/loader.txt   - Силинский REDUOL! большая удача, что есть в текстах  
 besmtask/loadload.txt - резидентный загрузчик
+besmtask/madlen.txt   - Мадлен 2 (имя Мадлен придумал Волков, aka MAde in Dubna and LENingard) 
 
-besmtask/madlen.txt  - Мадлен 2 (имя Мадлен придумал Волков, aka MAde in Dubna and LENingard) 
-
-besmtask/task11.ts1
-
-besmtask/task47.ts2
+besmtask/task11.ts1   -  БСЗ 1
+besmtask/task47.ts2   -  БСЗ 2
 
 # command/ 
 
@@ -208,8 +196,7 @@ d_besm6/t.for
 
 d_besm6/topc
 
-# dis664/ 
-содержание диска 664, части кросс системы
+; dis664/   - содержание диска 664, части кросс системы
 
 dis664/arbtest
 
@@ -287,8 +274,7 @@ dis664/tktest4
 
 dis664/xemtest.mak
 
-# dis705/ 
-содержание диска 705, части кроос системы
+; dis705/   -  содержание диска 705, части кроос системы
 
 dis705/assem.doc
 
@@ -327,199 +313,115 @@ dis705/topc
 dis705/workin.ext
 
 
-# disser/ 
-Сапожникова Т.
+; disser/    - Сапожникова Т.
 
 disser/a.chi
-
 disser/annotat.chi
-
 disser/cl1.chi
-
 disser/cl2.chi
-
 disser/cl.chi
-
 disser/d1.chi
-
 disser/d2.chi
-
 disser/d3.chi
-
 disser/d4.chi
-
 disser/d5.chi
-
 disser/dd.chi
-
 disser/dlit.chi
-
 disser/fil.chi
-
 disser/fil.doc
-
 disser/opp1.chi
-
 disser/opp2.chi
-
 disser/poctob.chi
-
 disser/proekt2.chi
-
 disser/prot1.chi
-
 disser/prot2.chi
-
 disser/protocol.chi
-
 disser/ref.chi
-
 disser/slast.chi
-
 disser/speech2.chi
-
 disser/sprav1.chi
-
 disser/sprav2.chi
-
 disser/spravka.chi
-
 disser/tomilin.chi
-
 disser/z.chi
 
-# deb_besm/
 
-тексты системы 
+; deb_besm/  - тексты системы 
 
-dub_besm/dubna.dd
-диспетчер, но не очень ясно какой именно 
-
-dub_besm/dubna.ms
-мониторка 
+dub_besm/dubna.dd   - диспетчер, но не очень ясно какой именно 
+dub_besm/dubna.ms   - мониторка +  дин. загрузчик
 
 # i80870/ 
 
 i8080/i8080.lib
-
 i8080/i8080.txt
 
 
-# kim/
-  простенькие программы для системного процессора, которые были написаны для отладки
+; kim/ - простенькие программы для системного процессора, которые были написаны для отладки
  интефейсов DPM (Dual Port Memory), процессор тогда еще был не живой     
 
 kim/aaa.asm
-
 kim/bb1.asm
-
 kim/bb.asm
-
 kim/bb.hex
-
 kim/bb.map
-
 kim/bb.obj
-
 kim/ccc.c
-
 kim/com.asm
-
 kim/dp1.asm
-
 kim/dp2.asm
-
 kim/dp3.asm
-
 kim/dp.asm
-
 kim/dpb.asm
-
 kim/dpb.hex
-
 kim/dpb.map
-
 kim/dpb.obj
-
 kim/dpm.asm
-
 kim/dpmii.asm
-
 kim/dpmiii.asm
-
 kim/dpmiv.asm
-
 kim/dpmiv.hex
-
 kim/dpmiv.map
-
 kim/dpmiv.obj
-
 kim/dpm.obj
-
 kim/dpmv.asm
-
 kim/dpx.asm
-
 kim/dpx.hex
-
 kim/dpx.map
-
 kim/dpx.obj
-
 kim/eee.asm
-
 kim/emu.asm
-
 kim/emuii.asm
-
 kim/emuw.asm
-
 kim/mak.bat
-
 kim/mmm.bat
-
 kim/moni.txt
-
 kim/newrate.asm
-
 kim/ot3.obj
-
 kim/ppi.asm
-
 kim/ppii.asm
-
 kim/ppir1.asm
-
 kim/ppir.asm
-
 kim/ppiw1.asm
-
 kim/ppiw.asm
-
 kim/ram.asm
-
 kim/ramii.asm
-
 kim/ramiii.asm
-
 kim/ramp.asm
-
 kim/rs.asm
-
 kim/tag.asm
 
-# libs
+
+; libs  - the real objects of librar-12 & librar-37
  
 lib12/librar.12
-
 lib37/librar.37
 
 libtest/lt1.for
 
 libtest/lt2.for
 
-# monsys/ 
+; monsys/ - the real object  monsys-9
 
 monsys/monsys.9
 
