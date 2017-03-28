@@ -1,7 +1,7 @@
 #! /bin/sh
 # Staging OS Dubna sources in Dispak for the bootstrap  
 # Copyright 2017, by M.Popov
-# MS source
+# MS sources
 set -x
 # besm6/besm6.github.io/sources/dubna/besmmons
 REPO=`pwd`/../besmmons/system*.txt
@@ -14,9 +14,9 @@ cd spl;
 echo loading sources form $TEMP
 ./load $REPO
 if [ $? -ne "0" ]; then
-rm -f -- "$TEMP"
-trap - EXIT
-exit 1
+   rm -f -- "$TEMP"
+   trap - EXIT
+   exit 1
 fi 
 
 )
@@ -58,12 +58,12 @@ cat $TEMP
 sleep 1
 
 echo compiling ...
-dispak $TEMP > ms-base-src.list
+dispak -l $TEMP > ms-base-src.list
 
 if [ $? -ne "0" ]; then
-rm -f -- "$TEMP"
-trap - EXIT
-exit 1
+   rm -f -- "$TEMP"
+   trap - EXIT
+   exit 1
 fi 
 
 rm -f -- "$TEMP"
