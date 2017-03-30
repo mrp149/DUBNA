@@ -1,6 +1,6 @@
 #! /bin/sh
 # Staging OS Dubna sources in Dispak for the bootstrap  
-# Copyright 2017, by M.Popov
+# Copyright 2017, by Mikhail Popov
 # MS source code
 set -x
 # besm6/besm6.github.io/sources/dubna/besmmons
@@ -21,7 +21,7 @@ fi
 
 )
 
-# numbering the source and place it on tape 1200
+# numbering the source and place it on tape 1201
 # then do the default compilation with a listing 
 touch $HOME/.besm6/1201
 
@@ -37,7 +37,7 @@ eeв1а3
 *r:50100
 *w:66100
 *c All main source are numbered
-*n:  000001
+*n:   00001
 *ee
 *
 *     The default compilation
