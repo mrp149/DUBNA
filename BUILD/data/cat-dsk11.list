@@ -1,0 +1,46 @@
+           *CALL DOS/IAE
+                                                      03.03.17 M1
+ Д O C  ИAЭ
+  01.11.74
+           DISC 11-*****
+           NAME ******
+           DELETE ALL
+           NAME ******
+           GIVE FILE LIBRAR (650)
+           SPEC 12 - ******,W
+           MASTER  SYSTEM (W)
+           GIVE FILE LIBRAR (650)
+           MASTER SYSTEM (W)
+           SPEC 37 - ******,W
+           GIVE FILE CATALO (24)
+           MASTER SYSTEM (W)
+           SPEC 8 - ******,W
+           GIVE FILE SCRATC (200)
+           MASTER SYSTEM (W)
+           NAME ******
+           FILE SCRATC
+           GENERAL USE (W)
+           NAME ******
+           PRINT DISC
+               KATAЛOГ OT 00.00.
+               /BEPCИЯ N 00006
+  :------:------:------:---:------:---:------:---:
+  :ФAЙЛ  :ДЛИHA :ДOCTYП:R/W:MASTER:R/W:FRIEND:R/W:
+  :------:------:------:---:------:---:------:---:
+  :      :      :      :   :      :   :      :   :
+  :LIBRAR:00650 :-0012-: W :SYSTEM: W :      :   :
+  :LIBRAR:00650 :-0037-: W :SYSTEM: W :      :   :
+  :CATALO:00024 :-0008-: W :SYSTEM: W :      :   :
+  :SCRATC:00200 :OБЩИЙ : W :SYSTEM: W :      :   :
+  :------:------:------:---:------:---:------:---:
+           PRINT SPEC
+ 1744 BATIST  000000  006
+ 0012-LIBRAR  0110 0040 0006 4700
+      SYSTEM  100001
+ 0037-LIBRAR  0110 0046 5015 1700
+      SYSTEM  100001
+ 0008-CATALO  0110 0055 2015 4300
+      SYSTEM  100001
+      SCRATC  0140 0055 4417 4300
+      SYSTEM  100001
+           END DOS

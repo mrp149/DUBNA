@@ -1,0 +1,84 @@
+           *CALL DOS/IAE
+                                                      03.03.17 M1
+ Д O C  ИAЭ
+  01.11.74
+           DISC 9-*****
+           NAME ******
+           DELETE ALL
+           NAME ******
+           GIVE FILE MONSYS (600)
+           MASTER SYSTEM (W)
+           SPEC 9 - ******
+           GIVE FILE D73LIB (100)
+           MASTER SYSTEM (W)
+           SPEC 5 - ******
+           GIVE FILE      M (200)
+           MASTER SYSTEM (W), MJPOP (W), WORKIN (W)
+           SPEC 7 - *
+           GIVE FILE D73INP (100)
+           MASTER SYSTEM (W)
+           SPEC 1 - ******
+           GIVE FILE D73OUT (200)
+           MASTER SYSTEM (W)
+           SPEC 3 - ******
+           GIVE FILE D73STA  (40)
+           MASTER SYSTEM (W)
+           SPEC 6 - ******
+           GIVE FILE USESTA  (40)
+           MASTER SYSTEM (W)
+           SPEC 10 - ******
+           GIVE FILE LINBUF (200)
+           MASTER SYSTEM (W), MJPOP (W)
+           SPEC 11 - ******
+           GIVE FILE ROLLIB  (44)
+           MASTER SYSTEM (W)
+           NAME ******
+           FILE ROLLIB
+           GENERAL USE (W)
+           NAME ******
+           FILE ROLLIB
+           SPEC 1 - ******
+           PRINT DISC
+               KATAЛOГ OT 00.00.
+               /BEPCИЯ N 00006
+  :------:------:------:---:------:---:------:---:
+  :ФAЙЛ  :ДЛИHA :ДOCTYП:R/W:MASTER:R/W:FRIEND:R/W:
+  :------:------:------:---:------:---:------:---:
+  :      :      :      :   :      :   :      :   :
+  :MONSYS:00600 :-0009-: R :SYSTEM: W :      :   :
+  :D73LIB:00100 :-0005-: R :SYSTEM: W :      :   :
+  :M     :00200 :-0007-: R :WORKIN: W :      :   :
+  :      :      :      :   :MJPOP : W :      :   :
+  :      :      :      :   :SYSTEM: W :      :   :
+  :D73INP:00100 :-0001-: R :SYSTEM: W :      :   :
+  :D73OUT:00200 :-0003-: R :SYSTEM: W :      :   :
+  :D73STA:00040 :-0006-: R :SYSTEM: W :      :   :
+  :USESTA:00040 :-0010-: R :SYSTEM: W :      :   :
+  :LINBUF:00200 :-0011-: R :MJPOP : W :      :   :
+  :      :      :      :   :SYSTEM: W :      :   :
+  :ROLLIB:00044 :-0001-: R :SYSTEM: W :      :   :
+  :------:------:------:---:------:---:------:---:
+           PRINT SPEC
+ 1744 BATIST  000000  006
+ 0009-MONSYS  0110 0000 0005 7700
+      SYSTEM  100001
+ 0005-D73LIB  0110 0006 0006 7700
+      SYSTEM  100001
+ 0007-M       0310 0007 0010 7700
+      WORKIN  100001
+      MJPOP   100001
+      SYSTEM  100001
+ 0001-D73INP  0110 0011 0011 7700
+      SYSTEM  100001
+ 0003-D73OUT  0110 0012 0013 7700
+      SYSTEM  100001
+ 0006-D73STA  0110 0014 0014 3700
+      SYSTEM  100001
+ 0010-USESTA  0110 0014 4014 7700
+      SYSTEM  100001
+ 0011-LINBUF  0210 0015 0016 7700
+      MJPOP   100001
+      SYSTEM  100001
+ 0001-ROLLIB  0110 0017 0017 4300
+      SYSTEM  100001
+           END DOS
