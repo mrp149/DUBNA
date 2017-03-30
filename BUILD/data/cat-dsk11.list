@@ -1,27 +1,3 @@
-           *CALL DOS/IAE
-                                                      03.03.17 M1
- Д O C  ИAЭ
-  01.11.74
-           DISC 11-*****
-           NAME ******
-           DELETE ALL
-           NAME ******
-           GIVE FILE LIBRAR (650)
-           SPEC 12 - ******,W
-           MASTER  SYSTEM (W)
-           GIVE FILE LIBRAR (650)
-           MASTER SYSTEM (W)
-           SPEC 37 - ******,W
-           GIVE FILE CATALO (24)
-           MASTER SYSTEM (W)
-           SPEC 8 - ******,W
-           GIVE FILE SCRATC (200)
-           MASTER SYSTEM (W)
-           NAME ******
-           FILE SCRATC
-           GENERAL USE (W)
-           NAME ******
-           PRINT DISC
                KATAЛOГ OT 00.00.
                /BEPCИЯ N 00006
   :------:------:------:---:------:---:------:---:
