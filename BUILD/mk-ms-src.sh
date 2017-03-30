@@ -1,7 +1,7 @@
 #! /bin/sh
 # Staging OS Dubna sources in Dispak for the bootstrap  
 # Copyright 2017, by Mikhail Popov
-# MS source code
+# staging MS Dubna source code
 set -x
 # besm6/besm6.github.io/sources/dubna/besmmons
 REPO=`pwd`/../besmmons/system*.txt
@@ -36,8 +36,8 @@ eeв1а3
 *edit
 *r:50100
 *w:66100
-*c All main source are numbered
-*n:   00001
+*c All main sources are numbered
+*n:    0001
 *ee
 *
 *     The default compilation

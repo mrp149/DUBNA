@@ -1,7 +1,7 @@
 #! /bin/sh
 # Staging OS Dubna sources in Dispak for the bootstrap  
-# Copyright 2017, by Mikhail .Popov
-# DD source code
+# Copyright 2017, by Mikhail Popov
+# staging DD81 source code
 set -x
 # besm6/besm6.github.io/sources/dubna/besmdisp
 REPO=`pwd`/../besmdisp/*.dd*
@@ -36,7 +36,7 @@ eeв1а3
 *edit
 *r:50100
 *w:66100
-*c All main source are numbered
+*c All main sources are numbered
 *n:    0001
 *ee
 *

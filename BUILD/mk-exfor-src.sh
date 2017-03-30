@@ -1,7 +1,7 @@
 #! /bin/sh
 # Staging OS Dubna sources in Dispak for the bootstrap  
 # Copyright 2017, by Mikhail Popov
-# FORTRAN source code
+# staging FORTRAN source code
 set -x
 # besm6/besm6.github.io/sources/dubna/besmtask
 REPO=`pwd`/../besmtask/*.vv
