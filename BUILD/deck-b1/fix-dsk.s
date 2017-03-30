@@ -365,8 +365,8 @@ C         ПPOBEPKA AДPECA ДOPOЖKИ
  ,ASN,64+24
  ,AEX,Y1
 Cs 
-Cs Ignore CW for track ID
-Cs BOOTSTRAP
+Cs Ignore the mismatch in the track ID
+Cs *** BOOTSTRAP ***
 Cs ,U1A,ERR PROG1.AДPEC HE TOT
  ,XTA,Y1.AДPEC
  ,ARX,BIT1.2-OЙ ДOPOЖKИ
@@ -391,10 +391,10 @@ C         ПPOBEPKA KC
  ,AEX,Y3.CЛYЖ CЛOBA
  ,AAX,B24/1
 Cs
-Cs Facking good checksums
+Cs Faking a good checksum
 Cs BOOTSTRAP
   ,xta, .
-  ,U1A,ERR PROG1.CYMMA HE TA
+Cs  ,U1A,ERR PROG1.CYMMA HE TA
  R9,V1M,LTKC
   P,VIM,ENDWR.ПPИ ЗAПИCИ
 C         YCT.ПPИЗH.ЗAKAЗ ПPOШEЛ
@@ -692,8 +692,8 @@ C         ECTЬ ЛИ ГOTOBHOCTЬ, HET - CTOП
  W,VTM,KER  KMD.TEKCT HA TT
  RL,VTM,STOP
 Cs
-Cs READY check? Affects STAT!  
-Cs ,U1A,MOQTR.HET ГOTOBH.
+Cs READY check! Affects STAT!  
+ ,U1A,MOQTR.HET ГOTOBH.
 C         ПPOBEPKA HECOBПAДEHИЯ AДPECOB.
 C         ECЛИ HET - ПOBTOP OБMEHA.
  J,XTA,COPC1-SM
@@ -740,8 +740,7 @@ C         ПPOBEPKA ГOTOBHOCTИ MOДYЛЯ.
  ,AAX,CREADY.
 Cs
 Cs Faking READY status?
-Cs 
- ,xta, 
+Cs ,xta, . affect STAT
 C         ПPИ ГOTOBHOCTИ CYMMATOP - 0.
  R,VTM,LTWSC.ПOCЛE ДEЙCTBИЯ
  ,U1A,STOP.MOД.HE ГOTOB
