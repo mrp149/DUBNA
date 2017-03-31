@@ -2,7 +2,7 @@
 *      NOTES on BOOTSTRAP DECK #1
 *      03/03/2017: 
 *        1. DISPAK=>SIMH Jump Supports only 128K memmory @SIMH
-*        2. ROLL-TRACK initialization, boot once with drums only!
+*        2. ROLL-TRACK initialization, first boot with drums only!
 *        3. STATBUF is disabled. 
 *        4. No real VOL names for DISK
 *        5. Only 2 terminals (consuls) can be used (tty25,tty26)

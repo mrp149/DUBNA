@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-#  Configurator for DD system build in dispak
+#  Script to make a patch desk for DD system build in dispak
 #
 #  Copyright 2017, Mikhail Popov.  
 #

@@ -1,7 +1,7 @@
 Cs
 Cs Fixes in DISC driver        03/03/2017
 Cs
-Cs  DISC  - Suppressing the handing of CW
+Cs  DISC  - Suppressing the handing of СлС
 Cs  DISCS - Generating pseudo DISK names
 Cs
  DISC:,NAME,
@@ -692,7 +692,7 @@ C         ECTЬ ЛИ ГOTOBHOCTЬ, HET - CTOП
  W,VTM,KER  KMD.TEKCT HA TT
  RL,VTM,STOP
 Cs
-Cs READY check! Affects STAT!  
+Cs READY MD check! Affects STAT!  
  ,U1A,MOQTR.HET ГOTOBH.
 C         ПPOBEPKA HECOBПAДEHИЯ AДPECOB.
 C         ECЛИ HET - ПOBTOP OБMEHA.
@@ -739,7 +739,7 @@ C         ПPOBEPKA ГOTOBHOCTИ MOДYЛЯ.
  ,AEX,CREADY.
  ,AAX,CREADY.
 Cs
-Cs Faking READY status?
+Cs Faking READY MD status?
 Cs ,xta, . affect STAT
 C         ПPИ ГOTOBHOCTИ CYMMATOP - 0.
  R,VTM,LTWSC.ПOCЛE ДEЙCTBИЯ

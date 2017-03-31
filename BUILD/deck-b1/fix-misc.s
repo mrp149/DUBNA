@@ -424,7 +424,7 @@ C---
  ,AOX,=:4
  ,ATX,44B
 Cs
-Cs It is not right, but not so crucial 
+Cs It is not right in dispak, but not so crucial 
 Cs ,UJ,MONITOR*+1
  ,UJ,MONITOR*+2
 C       KOPPEKTИPOBKA AДP. ИЗ 2-Г0 PEЗИДEHTA
@@ -480,8 +480,8 @@ C.....
  DMTNRS:,Z01,100B
  ,,NP+5
 Cs
-Cs  DD needs the real native MS!
-Cs  so, geeting it from 9/MONSYS
+Cs  DD needs the real (native) MS image!
+Cs  so, getting it from 9/MONSYS
 Cs  INFMS:,010,100B
 Cs  ,040,
  INFMS:,010,100B

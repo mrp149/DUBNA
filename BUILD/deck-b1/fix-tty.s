@@ -1,5 +1,5 @@
 Cs
-Cs Fixes in the treminals      03/03/2017
+Cs Fixes in the tty support    03/03/2017
 Cs
 Cs  BIO*TL  - fix for SIMH  
 Cs  MPX*T   - dummy driver
@@ -57,7 +57,7 @@ C=====   KOHЦЫ CИMBOЛOB (BBOД/BЫBOД)
 C-----   BBOД + HAЧAЛA CИMBOЛOB
  ,EXT,4100B. I N P U T
 Cs
-Cs Removing JINR specifics
+Cs Removing JINR's specifics
 Cs ,EXT,146B.CИHXPOHИЗAЦИЯ
  ,AAX,MIN
  F,ATX,MTR.- KOHЦЫ И BЫBOД

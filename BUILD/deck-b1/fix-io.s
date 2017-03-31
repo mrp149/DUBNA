@@ -1,7 +1,7 @@
 Cs
 Cs Fixes in the main I/O task  03/03/2017
 Cs
-Cs  TRAM70 - suppressing the CW checking on DRUM
+Cs  TRAM70 - suppressing the checking of СлС/CS on DRUM
 Cs
  TRAM70  :  ,NAME,
 C---------
