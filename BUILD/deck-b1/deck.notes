@@ -11,6 +11,6 @@
 *        8. DEBMULT will run as a separate job, due to Dispak
 *        9. E50 0076 error is expected at the end of the link job
 *       10. NO STL!
-*       11. Date accepted only for 1989 year!
+*       11. Date settings accepts only year of 1989!
 *       12. Line Printer works 
 *
