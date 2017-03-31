@@ -1,7 +1,7 @@
 # OS Dubna Bootstrap in Dispak
 # Assumptions and requisitions 
 #
-# Copyright, 2017 by M.Popov 
+# Copyright, 2017 by Mikhail Popov 
 # 
 # Rev A. 2017/03/03
 # Rev B. 2017/03/27
@@ -10,8 +10,8 @@
 #
 ### TAPE LABELS:
 # The following tape labels are fixed in OS Dubna
-# these lebels can be labeldd tapes or named tape 
-# models on disk.
+# these lebels are for labeled (named) tapes models 
+# on system disks
 
 # Allocations in DD:
 
@@ -36,12 +36,12 @@
 
 #
 ### THE FOLLLOWING IS CORREPONDING TO TAPE NUMBERS:
-# Please NOTE, the FIXED TAPE NUMBERS are used in the
-# bootstrap sequence and scripts. All these tapes are 
+# Please NOTE, the FIXED TAPE NUMBERS are used in
+# the bootstrap sequence and scripts. All tapes are 
 # generated during the bootstrap and in used by the
 # bootstrap scripts.
 # 
-# All generated tapes have the following format:
+# All tapes have the following format:
 #-----------------------------------
 #   ZONE  | CONTENT
 #-----------------------------------
