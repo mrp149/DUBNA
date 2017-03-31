@@ -1,0 +1,129 @@
+; boot_dubna.b6
+
+;          1 Й TYMБЛEPHЫЙ PEГИCTP
+;
+; 48    BBOД C ПACПOPTOM KAK B Д68.
+; 47    OTMEHA MOДEЛИPOBAHИЯ MБ HA ДИCKAX
+;       B MOMEHT BЫЗOBA ДИCПETЧEPA.
+; 46-45 БЛOKИPOBKA OПOЗHABAHИЯ ДИCKOB B
+;       HAПPABЛEHИЯX 3-4 COOTBETCTBEHHO.
+; 24    ПEЧATЬ MOДEЛEЙ MЛ ПPИ BЫЗOBE ДИCП.
+; 23    БЛOKИPOBKA ЗAПYCKA MYЛЬTИTAЙПA.
+; 16-01 БЛOKИPOBKA ИCПOЛЬЗOBAHИЯ MБ (10-27).
+;       ДЛЯ BЫБPOCA ЗAДAЧИ, ЗAЦИKЛИBШEЙCЯ HA
+;       MБ, MOЖET ПOTPEБOBATЬCЯ EГO БЛOKИPO-
+;       BAHИE HA TP-1.
+
+; DR 20-24 are closed
+в 1
+с 2000 0000 4000 0364
+
+;          2-Й TYMБЛEPHЫЙ PEГИCTP
+;
+; 48    KATAЛOГИ BBOДA/BЫBOДA ПPИ HOCИTEЛE.
+; 47    ЧИCTKA KATAЛOГA ABTOBBOДA
+;       ПPИ BЫЗOBE ДИCПETЧEPA.
+; 46    ЧИCTKA KATAЛOГA ABTOBЫBOДA
+;       ПPИ BЫЗOBE ДИCПETЧEPA.
+; 45    ЧИCTKA KATAЛOГA CБPOШEHHЫX ЗAДAЧ
+;       ПPИ BЫЗOBE ДИCПETЧEPA.
+; 44    БЛOKИPOBKA ПEЧATИ OTБPAKOBAHHЫX
+;       TPAKTOB ПPИ BЫЗOBE ДИCПETЧEPA.
+; 42    БЛOKИPOBKA ПOИCKA БYФEPOB BBOДA
+;       И BЫBOДA И ЗAПYCKA PACПEЧATKИ
+;       И PEЖИMA БYФEPИЗAЦИИ BЫBOДA.
+; 41,40 БAPAБAH 21 (22) MOHИTOPHOЙ CИCTEMЫ
+;       MOДEЛИPYETCЯ 0-37 (40-77)   ЗOHAMИ
+;       ДИCKOBOГO ФAЙЛA  9/MONSYS.
+; 39    KATAЛOГ ГPAФИKOB HA CATALO/8
+;
+; 33-31 HOMEP ЭKЗEMПЛЯPA ДИCПETЧEPA (0-7), BЫЗЫBAEMOГO C ДИCKA.
+;       CYЩECTBEHHЫ TOЛЬKO B MOMEHT BЫЗOBA.
+;
+; 30    PAЗPEШEHИE CБOPA CTATИCTИKИ ПO TEPMИHAЛЬHЫM ПOЛЬЗOBATEЛЯM.
+;
+; 29-26 БЛOKИPOBKA ПPИBЯЗKИ HOBЫX KAHAЛOB
+;       K TEPMИHAЛЬHЫM ПOДCИCTEMAM:
+; 29    - "OPERTERM",
+; 28    - MYЛЬTИTAЙП,
+; 27    - ЭKPAHHЫЙ PEДAKTOP.
+; 26    - MOHИTOP ПOДCИCTEM
+; 06-01 HOMEP OCHOBHOГO OПEPATOPCKOГO TEPMИHAЛA B COOTBETCTBИИ C HACTPOЙKOЙ
+;
+
+в 2
+c 1730 0000 0000 0001
+; DR only
+;c 3700 0000 0000 0001
+
+
+;          4 Й TYMБЛEPHЫЙ PEГИCTP
+;
+; 48-44 HE HAЖИMATЬ - BЛИЯЮT HA TPAHCЛЯTOP
+; 24-01 ШKAЛA TEPMИHAЛOB, C KOTOPЫX PAЗPEШEH ЗAПYCK ЗAДAЧ MИHYЯ OЧEPEДЬ BBOДA.
+;       (HOMEP PAЗPЯДA COOTBETCTBYET HOMEPY BИPTYAЛЬHOГO KAHAЛA)
+;
+
+в 4
+c 0000 0000 7777 7777
+
+;          5 Й TYMБЛEPHЫЙ PEГИCTP
+;
+; 25    БЛOKИPOBKA ПPOBEPKИ ЧACTOTЫ ПPИ BЫЗOBE ДИCПETЧEPA.
+; 15-01 YKAЗATEЛЬ AДPECA B HEKOTOPЫX ПPИKAЗAX.
+;
+
+в 5
+с 0000 0001 0000 0000
+
+
+;          6 Й TYMБЛEPHЫЙ PEГИCTP
+;
+; 48-45 БЛOKИPOBKA ЛИHИЙ CBЯЗИ TASK70
+; 48    EC-1010 ЛBTA
+; 47    M-6000 OHMY
+; 46    MИHCK-2 PXЛ
+; 45    M-6000 ЛBTA.
+; 40-25 ШKAЛA ШИФPOB ПЛAHИPOBЩИKA
+; 24    БЛOKИPOBKA ПPOBEPKИ PECYPCOB ПPИ PAБOTE ПЛAHИPOBЩИKA
+; 16    ИЗMEHEHИE PEЖИMA ЭKOHOMИИ БYMAГИ BO BPEMЯ CЧETA ЗAДAЧИ
+; 13    ЗAПYCK ПOГИБШИX ЗAДAЧ ИЗ ФAЙЛA BBOДA ПPИ ПEPEBЫЗOBE ДИCПETЧEPA
+; 12-11 ПPИ HAЛИЧИИ MYЛЬTИПЛEKCOPA ГOИ:
+;       PAЗPEШEHИE PAБOTЫ MYЛЬTИПЛEKCOPA HA 12-11 P. ПPП
+; 09    БЛOKИPOBKA OЖИДAHИЯ OTBETA OПEPATOPA ПOCЛE ПEPФOPAЦИИ ПPИ ABTOBЫBOДE.
+; 08    PAЗPEШEHИE OПOЗHABAHИЯ ДИCПAKOBCKИX MAГHИTHЫX ЛEHT.
+; 07    OБЯЗATEЛЬHЫЙ OCTAHOB ПPИ KK И KЧ.
+; 06    PEЖИM OTЛAДKИ ДЛЯ ПЛAHИPOBЩИKA.
+; 05    БEЗYCЛOBHAЯ ПEЧATЬ HA AЦПY ABOCTHOЙ ДИAГHOCTИKИ.
+; 03-01 HOMEP ПPИKAЗA ПPИ BЫДAЧE C ПYЛЬTA
+;
+
+в 6
+c 7417 7777 0000 0160
+
+;          7 Й TYMБЛEPHЫЙ PEГИCTP
+;
+; 48    ПAMЯTЬ 32K.
+; 47    PAБOTAET TOЛЬKO CEГMEHT ПAMЯTИ,
+;       BЫБPAHHЫЙ KHOПKOЙ ПCП (ИMEET CMЫCЛ
+;       ПPИ ПAMЯTИ 128K, CPAБATЫBAET TOЛЬKO
+;       ПPИ ПEPEBЫЗOBE ДИCПETЧEPA).
+; 46-45 БЛOKИPOBKA AЦПY (0,1).
+; 44-43 БЛOKИPOBKA ПИ-80 (0,1).
+; 42-41 БЛOKИPOBKA ПЛ  (0-1)
+; 40-39 CЖATИE ЛИCTИHГA HA AЦПY (0-1)
+; 38    БЛOKИPOBKA ПACПOPTA MACCИBA B Э73
+; 36-34 HOMEP MAШИHЫ.
+; 34-33 TAKЖE ПPИЗHAK EC-ПEЧATEЙ BMECTO
+;       0-1X AЦПY, COOTBETCTBEHHO.
+; 32    БЛOKИPOBKA ЗAПИCИ DAYFILE B ФAЙЛ CTATИCTИKИ.
+; 31    БЛOKИPOBKA ПOДBOДA ЛEHT LIBRARY.
+; 30    KAPTA *PASS OБЯЗATEЛЬHA.
+;       (ПPOИЗBOДИTCЯ CБOP ПOЛЬЗ.CTATИCTИKИ)
+; 27    BOЗMOЖEH ФOHOBЫЙ ПPИOPИTET ШИФPY 1.
+; 25-03 KYC ДЛЯ BЫЗOBA ДИCПETЧEPA ПO 9ПП.
+; 02    HOMEP ФC (B ДYБHE ПPИЗHAK HE CDC405)
+; 01    HOMEP ЗAПYCKAEMOГO YBBK (ECЛИ 2 ГOTOBЫ).
+
+в 7
+c 0000 0300 0140 0000
