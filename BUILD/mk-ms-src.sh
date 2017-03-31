@@ -21,14 +21,14 @@ fi
 
 )
 
-# numbering the source and place it on tape 1201
+# numbering the source and place it on tape 1200
 # then do the default compilation with a listing 
-touch $HOME/.besm6/1201
+touch $HOME/.besm6/1200
 
 cat > $TEMP << EOF
 шифр 419999 зс5^
 лен 50(1999-ЗП)^
-лен 66(1201-ЗП)^
+лен 66(1200-ЗП)^
 лен 41(2048)^
 eeв1а3
 *name MS-2017
