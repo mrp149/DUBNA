@@ -21,8 +21,9 @@ fi
 
 )
 
-# numbering the source and place it on tape 1200
+# the source to be placeed  on tape 1200
 # then do the default compilation with a listing 
+rm -f $HOME/.besm6/1200
 touch $HOME/.besm6/1200
 
 cat > $TEMP << EOF
@@ -36,8 +37,6 @@ eeв1а3
 *edit
 *r:50100
 *w:66100
-*c All main sources are numbered
-*n:    0001
 *ee
 *
 *     The default compilation
