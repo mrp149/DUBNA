@@ -31,7 +31,7 @@ cat > $TEMP << EOF
 лен 66(1221-ЗП)^
 лен 41(2048)^
 eeв1а3
-*name STL-2017
+*name LIB21-STAGE
 *      no list
 *edit
 *r:50100
