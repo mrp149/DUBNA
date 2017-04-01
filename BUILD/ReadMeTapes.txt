@@ -71,10 +71,9 @@
 ## 1200-1399 Monitor System (MS) & libraries
 #
 1200 - Мониторная Система
-1211 - task11+task47 (compilation in FOREX-3)
 1221 - libra21 
 1223 - libra23 (compilation in FOREX-3)
-1247 - task47	
+1247 - task11+task47 (compilation in FOREX-3)
 1300 - exfor - not used (partial source code)
 
 ## 1400-1899 OS Dubna Dispatcher (DD)
