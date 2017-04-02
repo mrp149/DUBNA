@@ -1,0 +1,2 @@
+# DUBNA
+Bring up OS DUBNA on BESM-6@SIMH
