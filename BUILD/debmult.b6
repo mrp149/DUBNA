@@ -1,0 +1,114 @@
+шифр 419999 зс5^
+лен 50(1400)^
+лен 41(2048)^
+лен 40(9)^
+лен 67(1999-ЗП)^
+лен 40(9)^
+eeв1а3
+*name DEBMULT
+*     no list
+*call putflag*
+5
+*perso:50000
+*MADLEN,L=BRFG,MODEL=SIMH,STEXT=FREQ300.
+ DEBMULT:,NAME,
+ 'PEДAKЦИЯ OT 04.06.73'
+ MONITOR*:,SUBP,.
+ EXCH NRS:,SUBP,.
+C......   EXCH NRS - ИHФ. CЛOBO ДЛЯ
+C         BЫЗOBA HEPEЗИДEHTA MYЛЬTИTAЙПA.
+ D0:,PC,0.
+ FETCH:,SUBP,
+ FORMPACK:,SUBP,.
+ OPERANDS:,SUBP,.
+   BUFSAP:,LC,20
+ *TGOSISO:,SUBP,
+ *DRUMUS:,SUBP,.B XBOCTE
+  PTRP:,PC,46000B
+ NPTRP:,P/P,(PTRP)16
+ ,DRUM,RTRP.ЧTEH. TPП
+ ,XTA,17B.KOHEЦ TPП
+ ,UTC,PTRP+3774B.
+ ,ATX,.ДЛЯ DISPLOAD
+ 14,VTM,-2.
+C   ПEPEПИCЬ ЗAГOЛOBKA
+ LH:14,UTC,HEAD+2.
+ ,XTA,.
+ 14,UTC,PTRP+3777B.
+ ,ATX,.
+ 14,VLM,LH.
+ ,DRUM,WTRP.
+ ,DRUM,WTRP+1.
+ ,XTA,EXCH NRS.
+ ,AAX,Z40.
+ ,ATX,IW70.
+ ,DRUM,IW70
+ pp: ,bss,
+     ,drum, mt9pass
+     ,drum, b23pass
+     ,xta, mt9pass
+     ,arx,=1
+     ,atx, mt9pass
+     ,xta, b23pass
+     ,arx,=1
+     ,atx, b23pass
+
+     ,drum, mt9pass
+     ,drum, b23pass
+     ,xta, mt9pass
+     ,arx,=1
+     ,atx, mt9pass
+     ,xta, b23pass
+     ,arx,=1
+     ,atx, b23pass
+
+     ,drum, mt9pass
+     ,drum, b23pass
+     ,xta, mt9pass
+     ,arx,=1
+     ,atx, mt9pass
+     ,xta, b23pass
+     ,arx,=1
+     ,atx, b23pass
+
+C ,UJ,MONITOR*+1.
+ 13,uj, 
+ IW70:,BSS,
+ RTRP:,010,NPTRP.
+ ,020,.TPП
+ WTRP:,,NPTRP.
+ ,067,140B+35B
+ :,,NPTRP+100B.
+ ,067,140B+36B.
+ mt9pass:,010,NPTRP.
+ ,040,0402B.
+ b23pass:,,NPTRP.
+ ,067,140B
+ HEAD:,ISO,18H* MYЛЬTИTAЙП *
+ ,LOG,
+ Z40:,LOG,7767 7777 7777 7777
+ CODE:,LOG,3053 4576 1634 0112.
+C  BUFSAP(20) ФOPMИPYET WRITDISP
+ ,END,
+ EXCHNRS:,NAME,
+C     PP 13-18 YKAЗATEЛЬ MБ
+C     PP 1-5 HAЧAЛЬHЫЙ N TPAKTA
+C     ДЛЯ HEPEЗИДEHTA MYЛЬTИTAЙПA
+C        ,014,100B
+C        ,025,37B
+C     B CЛYЧAE ЗAГPYЗKИ HA ЛEHTY
+C     39-Й PAЗPЯД = 0,  1-24 HE CYЩECTBEHHЫ
+C
+        ,010,100B
+        ,067,140B+37B
+ ,END,
+*tcatalog
+*MAIN DEBMULT
+*EXECUTE
+*	MAIN DD86
+*	CALL DATAPR*
+*	EXECUTE
+*READ OLD 
+*END FILE
+``````
+еконец
