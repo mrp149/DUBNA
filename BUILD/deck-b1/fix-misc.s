@@ -5,7 +5,7 @@ Cs
 Cs  *USESTA  - all link to 9/MONSYS
 Cs  *STATBUF - disabling system logs/stats
 Cs  EXCHNRS  - links FETCH to DR 22:37
-Cs  WRITDISP - using the right MS image 
+Cs  WRITDISP - using the right MS image, removing *50, *74
 Cs
  *USESTA:,NAME,
 C
@@ -424,9 +424,11 @@ C---
  ,AOX,=:4
  ,ATX,44B
 Cs
-Cs It is not right in dispak, but not so crucial 
+Cs It is not right in dispak, jump to
+Cs  => MOINTOR*+1 => КОНТРОЛЬ КОМАНДЫ, so *74  
 Cs ,UJ,MONITOR*+1
- ,UJ,MONITOR*+2
+ ,*74,
+Cs
 C       KOPPEKTИPOBKA AДP. ИЗ 2-Г0 PEЗИДEHTA
  CORADDR:,ITA,I
  ,AAX,B15
@@ -459,7 +461,8 @@ Cs to DR 22.35
  2,VTM,END WR
  TT PR:,BSS,
   ,ITA,1
-  ,FUN,76B
+Cs It is not supported in DISPAK
+Cs  ,FUN,76B
   2,UJ,
   FIXNRS:,XTA,MTNRS
   ,UJ,COPYNRPL
