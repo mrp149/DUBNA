@@ -9,13 +9,6 @@
  М.П.
 
 
-### besm6/
-
-	besm6/kt2.bin
-	besm6/kt2.txt
-	besm6/mpcoma.lst
-	besm6/os6.bin
-	besm6/os.txt
 
 # besmdisp/  - DD splited in sections
 
@@ -26,20 +19,11 @@ Note:  it the same as dub_besm/dubna.dd
 	besmdisp/sluga.dd4
 	besmdisp/tasksav.dd2
 
-
 # besml21/  - the sources of library 21 
-
-	besml21/assem.doc
-	besml21/kermit.ftn
-	besml21/kermit.pas
 
 	besml21/libra211.l21  - library 21 in sections
 	besml21/libra212.l21  - library 21 in sections
 	besml21/libra213.l21  - library 21 in sections
-
-	besml21/loader.doc
-	besml21/loader.txt
-	besml21/microb.doc
 
 # besml23/  - the sources of library 23
 
@@ -59,12 +43,8 @@ Note:  it the same as dub_besm/dubna.dd
 
 Note: it is the same as dub_besm/dumba.ms
 
-	besmmons/project.out
-	besmmons/project.txt
-
 	besmmons/system1.txt  - MS Dubna source 1
 	besmmons/system2.txt  - MS Dubna source 2
-
 
 # besmtask/ - вот тут части мониторки без которых не подняться
 
@@ -72,41 +52,10 @@ Note: it is the same as dub_besm/dumba.ms
 
 	besmtask/loader.txt	- Силинский REDUOL! большая удача, что есть в текстах  
 	besmtask/loadload.txt	- резидентный загрузчик
-	besmtask/madlen.txt	- Мадлен 2 
+	besmtask/madlen.txt	- Мадлен 2, V 3.5 
 		(имя Мадлен придумал Волков, aka MAde in Dubna and LENingard) 
-
 	besmtask/task11.ts1	-  БСЗ 1
 	besmtask/task47.ts2	-  БСЗ 2
-
-### command/ 
-
-	command/b6com
-	command/define
-	command/fltcom
-	command/intexcom
-	command/loadcom
-	command/melcom
-	command/nrcom
-	command/rwiocom
-
-### cross/  кросс система для МКБ 
-
-	cross/assem.txt
-	cross/emulator.doc
-	cross/extold.txt
-	cross/intrsp.bat
-	cross/lcross.lib
-	cross/lcross.mem
-	cross/loader.txt
-	cross/microb.doc
-	cross/microb.lib
-	cross/microb.txt
-	cross/mnemo.bat
-	cross/ossend.bat
-	cross/ostran.bat
-	cross/task.bat
-	cross/topc
-	cross/workin.ext
 
 ### d_bes6/
 
@@ -145,172 +94,18 @@ Note: it is the same as dub_besm/dumba.ms
 	d_besm6/t.for
 	d_besm6/topc
 
-### dis664/ - содержание диска 664, части кросс системы
-
-	dis664/arbtest
-	dis664/b6com
-	dis664/cashtest.mak
-	dis664/define
-	dis664/define.mak
-	dis664/fltcom
-	dis664/iniabt
-	dis664/iniabt.mak
-	dis664/initest
-	dis664/initest.mak
-	dis664/intexcom
-	dis664/intrtest.mak
-	dis664/iotest
-	dis664/jmpopc.old
-	dis664/ldtest
-	dis664/loadcom
-	dis664/melcom
-	dis664/memtest
-	dis664/memtest.mak
-	dis664/microb.lib
-	dis664/modftest.mak
-	dis664/nrcom
-	dis664/octtest
-	dis664/octtest.mak
-	dis664/phystest.mak
-	dis664/rwiocom
-	dis664/sectest
-	dis664/shfttest.mak
-	dis664/status.me
-	dis664/stndtest.mak
-	dis664/timetest.mak
-	dis664/tkt
-	dis664/tktest
-	dis664/tktest1
-	dis664/tktest2
-	dis664/tktest3
-	dis664/tktest4
-	dis664/xemtest.mak
-
-### dis705/ -  содержание диска 705, части кроос системы
-
-	dis705/assem.doc
-	dis705/assem.txt
-	dis705/emulator.doc
-	dis705/extold.txt
-	dis705/intrsp.bat
-	dis705/lcross.lib
-	dis705/lcross.mem
-	dis705/loader.doc
-	dis705/loader.txt
-	dis705/microb.doc
-	dis705/microb.lib
-	dis705/microb.txt
-	dis705/mnemo.bat
-	dis705/ossend.bat
-	dis705/ostran.bat
-	dis705/task.bat
-	dis705/topc
-	dis705/workin.ext
-
-
-## disser/ - Сапожникова Т.
-
-	disser/a.chi
-	disser/annotat.chi
-	disser/cl1.chi
-	disser/cl2.chi
-	disser/cl.chi
-	disser/d1.chi
-	disser/d2.chi
-	disser/d3.chi
-	disser/d4.chi
-	disser/d5.chi
-	disser/dd.chi
-	disser/dlit.chi
-	disser/fil.chi
-	disser/fil.doc
-	disser/opp1.chi
-	disser/opp2.chi
-	disser/poctob.chi
-	disser/proekt2.chi
-	disser/prot1.chi
-	disser/prot2.chi
-	disser/protocol.chi
-	disser/ref.chi
-	disser/slast.chi
-	disser/speech2.chi
-	disser/sprav1.chi
-	disser/sprav2.chi
-	disser/spravka.chi
-	disser/tomilin.chi
-	disser/z.chi
-
-# deb_besm/ - тексты системы 
+## deb_besm/ - тексты системы (for reference)
 
 	dub_besm/dubna.dd	- диспетчер, но не очень ясно какой именно 
 	dub_besm/dubna.ms	- мониторка +  дин. загрузчик
-
-### i80870/ 
-
-	i8080/i8080.lib
-	i8080/i8080.txt
-
-
-### kim/ 
-
-простенькие программы для системного процессора, которые были написаны для отладки интефейсов DPM (Dual Port Memory), процессор тогда еще был не живой	  
-
-	kim/aaa.asm
-	kim/bb1.asm
-	kim/bb.asm
-	kim/bb.hex
-	kim/bb.map
-	kim/bb.obj
-	kim/ccc.c
-	kim/com.asm
-	kim/dp1.asm
-	kim/dp2.asm
-	kim/dp3.asm
-	kim/dp.asm
-	kim/dpb.asm
-	kim/dpb.hex
-	kim/dpb.map
-	kim/dpb.obj
-	kim/dpm.asm
-	kim/dpmii.asm
-	kim/dpmiii.asm
-	kim/dpmiv.asm
-	kim/dpmiv.hex
-	kim/dpmiv.map
-	kim/dpmiv.obj
-	kim/dpm.obj
-	kim/dpmv.asm
-	kim/dpx.asm
-	kim/dpx.hex
-	kim/dpx.map
-	kim/dpx.obj
-	kim/eee.asm
-	kim/emu.asm
-	kim/emuii.asm
-	kim/emuw.asm
-	kim/mak.bat
-	kim/mmm.bat
-	kim/moni.txt
-	kim/newrate.asm
-	kim/ot3.obj
-	kim/ppi.asm
-	kim/ppii.asm
-	kim/ppir1.asm
-	kim/ppir.asm
-	kim/ppiw1.asm
-	kim/ppiw.asm
-	kim/ram.asm
-	kim/ramii.asm
-	kim/ramiii.asm
-	kim/ramp.asm
-	kim/rs.asm
-	kim/tag.asm
 
 
 # libs  - images of of 12/librar & 37/librar
 
 	lib12/librar.12 - the real image of librar-12
 	lib37/librar.37 - the real image of librar-37
+
+## libstest  - fortran compiler tests
 
 	libtest/lt1.for
 	libtest/lt2.for
@@ -319,21 +114,4 @@ Note: it is the same as dub_besm/dumba.ms
 
 	monsys/monsys.9 - the real image of  monsys-9
 
-
-### mparchiv
-
-	mparchiv/microb.arc
-
-###  os/
-
-	os/macros
-	os/os2
-	os/os3
-	os/os4
-	os/os5
-	os/os6
-	os/os7
-	os/os8
-	os/os9
-	os/osload
-	os/os.txt
+# END
