@@ -50,6 +50,6 @@ echo Making drum images for SIMH
 echo All done and ready for the first boot!
 sleep 3
 
-./besm6 -i first-dd-boot.ini
+besm6 -i first-dd-boot.ini
 
 cat ReadMeBoot.txt
