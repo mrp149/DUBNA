@@ -36,13 +36,13 @@ echo Making the patch deck
 touch $HOME/.besm6/1999
 
 ( cd deck-b1; ./mk-deck-b1.sh) > deck-b1.b6 
-echo compiling ... and linking ....
-dispak -l deck-b1.b6 | tee /dev/tty > deck-b1.list
-
 
 echo Run DEBMULT
 touch $HOME/.besm6/1999
 dispak -l debmult.b6 | tee /dev/tty > debmult.list
+
+echo Compiling the PATCH DECK ... and linking DD....
+dispak -l deck-b1.b6 | tee /dev/tty > deck-b1.list
 
 echo Making drum images for SIMH
 ( cd data; ./mkdrumdd.sh)
