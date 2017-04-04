@@ -485,8 +485,8 @@ C.....
 Cs
 Cs  DD needs the real (native) MS image!
 Cs  so, getting it from 9/MONSYS
-Cs  INFMS:,010,100B
-Cs  ,040,
+Cs  INFMS:,014,100B
+Cs  ,021,
  INFMS:,010,100B
  ,040,
  FP:,,
