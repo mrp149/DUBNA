@@ -1,0 +1,20 @@
+; MБ 25
+;  PAЗPЯДЫ  KYC-A  OБMEHA C MБ :
+;----------------------------------
+;
+;   1-2  - HOMEP CEKTOPA
+;   3-7  - HOMEP TPAKTA
+;   8-10 - HOMEP MБ
+;  11-12 - HOMEP AБЗAЦA
+;  13-17 - HOMEP ЛИCTA
+;    18   - ЧTEHИE
+;    19   - ЛИCTOBOЙ OБMEH
+;    21   - ЧTEHИE CЛ.CЛOB
+;  24-25 - HOMEP CEГMEHTA MOЗY
+
+в 6
+c 0000 0000 0004 0004
+
+
+в 7
+c 0000 0000 0140 1200
