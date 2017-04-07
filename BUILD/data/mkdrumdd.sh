@@ -10,4 +10,5 @@ cat dubdrum00 dubdrum00 > dr00
 ls -al dr00
 cp dr00 dubdrum1.bin
 cp dr00 dubdrum2.bin
+ln -s `/bin/pwd`/dubdrum2.bin $HOME/.besm6/2027
 ls -al dubdrum[12]*.bin

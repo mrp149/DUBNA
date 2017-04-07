@@ -16,7 +16,7 @@
 *       12. Line Printer works 
 *
 
-2. After the first  boot use d@dubna.ini in SIMH calls 
+2. After the first boot use d@dubna.ini in SIMH calls 
 
  besm6 -i d@dubna.ini
 
@@ -24,3 +24,10 @@
 
 This conludes the phase #1 of the bootstrap (30-Mar-2017)
 
+4. The system will be automatically rebuilt by starting ./exce.ex 
+execept srcipt in a separate window, when it is requested. The 
+script rebuilds DD and STL and puts it on DRUM 25
+
+   160/  - reports running tasks
+
+This conludes the phase #2 of the bootstrap (06-Apr-2017)
