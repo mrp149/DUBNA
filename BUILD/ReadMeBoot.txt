@@ -24,7 +24,7 @@
 
 This conludes the phase #1 of the bootstrap (30-Mar-2017)
 
-4. The system will be automatically rebuilt by starting ./exce.ex 
+4. The system will be automatically rebuilt by starting ./expe.ex 
 execept srcipt in a separate window, when it is requested. The 
 script rebuilds DD and STL and puts it on DRUM 25
 
