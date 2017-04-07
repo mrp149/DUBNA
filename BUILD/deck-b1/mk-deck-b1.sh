@@ -23,7 +23,7 @@ eeв1а3
 *     no list
 *call putflag*
 5
-*MADLEN,L=FBG.
+*MADLEN,L=B.
  LDSHIFT:,NAME,
  ,XTA,61B
  ,XTA,=0010 3700 0040 0000
@@ -77,6 +77,11 @@ fi
 if [ -f fix-dsk.s ]; then
   cat fix-dsk.s
 fi
+cat <<EOF2 
+*      preserve for linking DD
+*to perso:66040
+EOF2
+
 # misc stuff
 if [ -f fix-misc.s ]; then
   cat fix-misc.s
@@ -86,17 +91,17 @@ if [ -f fix-aux.s ]; then
   cat fix-aux.s
 fi
 
-# aux of the misc
+#  deck's notes
 if [ -f deck.notes ]; then
   cat deck.notes
 fi
-cat <<EOF2 
+cat <<EOF3 
 *tcatalog
 *MAIN DD86
 *CALL DATAPR*
 *EXECUTE
 *READ OLD 
 *END FILE
-EOF2
+EOF3
 echo "\`\`\`\`\`\`"
 echo еконец

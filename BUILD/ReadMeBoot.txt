@@ -16,9 +16,9 @@
 *       12. Line Printer works 
 *
 
-2. After the first  boot use ddubna.ini in SIMH calls 
+2. After the first  boot use d@dubna.ini in SIMH calls 
 
- besm6 -i ddubna.ini
+ besm6 -i d@dubna.ini
 
 3. The second consul port is 4199, can be used for Mutitype
 
