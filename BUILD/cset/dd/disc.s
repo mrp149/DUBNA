@@ -1,3 +1,9 @@
+Cs
+Cs Fixes in DISC driver        03/03/2017
+Cs
+Cs  DISC  - Suppressing the handing of СлС
+Cs  DISCS - Generating pseudo DISK names
+Cs
  DISC:,NAME,
 C
 C......   MOДYЛИ ДИCKOBOГO ДPAЙBEPA
@@ -358,7 +364,10 @@ C         ПEPEHOC CЛYЖ.CЛOBA B PAБ.ЯЧ. Y3
 C         ПPOBEPKA AДPECA ДOPOЖKИ
  ,ASN,64+24
  ,AEX,Y1
- ,U1A,ERR PROG1.AДPEC HE TOT
+Cs 
+Cs Ignore the mismatch in the track ID
+Cs *** BOOTSTRAP ***
+Cs ,U1A,ERR PROG1.AДPEC HE TOT
  ,XTA,Y1.AДPEC
  ,ARX,BIT1.2-OЙ ДOPOЖKИ
  ,ATX,Y1.ПAPЫ
@@ -381,7 +390,11 @@ C         ПPOBEPKA KC
   KS/WR:,BSS,
  ,AEX,Y3.CЛYЖ CЛOBA
  ,AAX,B24/1
-  ,U1A,ERR PROG1.CYMMA HE TA
+Cs
+Cs Faking a good checksum
+Cs BOOTSTRAP
+  ,xta, .
+Cs  ,U1A,ERR PROG1.CYMMA HE TA
  R9,V1M,LTKC
   P,VIM,ENDWR.ПPИ ЗAПИCИ
 C         YCT.ПPИЗH.ЗAKAЗ ПPOШEЛ
@@ -678,6 +691,8 @@ C         ECTЬ ЛИ ГOTOBHOCTЬ, HET - CTOП
  R,VTM,TESCOBT.ПOCЛE TTPRCO
  W,VTM,KER  KMD.TEKCT HA TT
  RL,VTM,STOP
+Cs
+Cs READY MD check! Affects STAT!  
  ,U1A,MOQTR.HET ГOTOBH.
 C         ПPOBEPKA HECOBПAДEHИЯ AДPECOB.
 C         ECЛИ HET - ПOBTOP OБMEHA.
@@ -723,6 +738,9 @@ C         ПPOBEPKA ГOTOBHOCTИ MOДYЛЯ.
  R,VJM,READPC2
  ,AEX,CREADY.
  ,AAX,CREADY.
+Cs
+Cs Faking READY MD status?
+Cs ,xta, . affect STAT
 C         ПPИ ГOTOBHOCTИ CYMMATOP - 0.
  R,VTM,LTWSC.ПOCЛE ДEЙCTBИЯ
  ,U1A,STOP.MOД.HE ГOTOB
@@ -904,6 +922,13 @@ C      ЦИKЛ YCT.BEPH.CBEPTKИ
  R5,ATX,-1
  R5,UTM,-1
  R5,V1M,YCB1.KOHEЦ ЦИKЛA
+Cs +++++++++++++++++++++++++++
+Cs Making a fake DISK VOL name
+ ,ita,a
+ ,arx,CT000000
+ j8,atx,NAMED1
+ j8,atx,NAMED2
+Cs +++++++++++++++++++++++++++
  CHCTY:,BSS,
 C......   ПOДПPOГPAMMA CHЯTИЯ БЛO-
 C      KИPOBKИ OCTAHOBA ПO YПP.
