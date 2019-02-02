@@ -1,3 +1,8 @@
+Cs
+Cs Fixes in the main I/O task  03/03/2017
+Cs
+Cs  TRAM70 - suppressing the checking of СлС/CS on DRUM
+Cs
  TRAM70  :  ,NAME,
 C---------
 C
@@ -1830,6 +1835,10 @@ C......   HE БЫЛO ЛИ ПYTAHИЦЫ CEKTOPOB
 C......   COBПAЛA ЛИ KOHTP. CYMMA
  ,XTA,RRR.
  10,AEX,1.
+Cs
+Cs BOOTSTRAP
+Cs
+ ,xta, . <= zerroing checksum
  ,UIA,L04357. - HET
  14,XTA,TBUT-1
  ,AAX,ЧTEHИE
