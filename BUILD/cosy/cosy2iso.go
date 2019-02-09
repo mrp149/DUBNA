@@ -80,7 +80,7 @@ func makecosy(inp string) string {
 		}
 
 	}
-	// string needs to be exactly 84 chars
+	// it needs to be exactly 14 words
 	if i < 83 {
 		fl = 83 - i
 		if fl == 1 {
