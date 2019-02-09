@@ -16,7 +16,7 @@ var u2i = make(map[rune]rune, 100)
 
 func initmaps() {
 	if len(asc_r) != len(iso_r) {
-		fmt.Fprint(os.Stderr, "something is fundamentally wrong")
+		fmt.Fprint(os.Stderr, "something is fundamentally wrong\n")
 	}
 	for i := 0; i < len(asc_r); i++ {
 		i2u[asc_r[i]] = iso_r[i]
@@ -27,7 +27,7 @@ func initmaps() {
 func iso2utf(r rune) rune {
 	tr := i2u[r]
 	if tr == rune(0) {
-		fmt.Fprint(os.Stderr, "unknown ISO symbol")
+		fmt.Fprintf(os.Stderr, "unknown ISO symbol: %03o -> %03o\n", r, tr)
 		return '*'
 	}
 	return tr
@@ -35,7 +35,7 @@ func iso2utf(r rune) rune {
 
 func test_i2u() {
 	initmaps()
-	fmt.Println("Char mappings")
+	fmt.Println("UTF-ISO mapping")
 	for i := 0; i < len(asc_r); i++ {
 		fmt.Printf("%o %s %s %s  %s  %s %s %s\n", asc_r[i],
 			string(asc_r[i]), "=", string(i2u[asc_r[i]]), "	",
@@ -172,15 +172,19 @@ func test_cosy() {
 	initmaps()
 	test_i2u()
 
-	fmt.Println("Testing encodind/decoding")
+	fmt.Println("Testing encoding/decoding")
 
-	abc := []byte{'a', 'b', 0200, 'c', 0201, 'd', 0202, 'e', 0203, '*', 0204, 'I', 'R', 'V', '\n'}
+	abc := []byte{'a', 'b', 0200, 'c', 0201, 'd', 0202, 'e', 0203, '*', 0204, 'I', 'R', 'V', '~', '`', '\n'}
 	cabc := string(abc)
 	eabc := expandcosy(cabc)
 	nabc := makecosy(eabc)
+	ru := iso2utf('\r')
+	if ru != '*' {
+		fmt.Println("The Magic of conversion!", string(ru))
+	}
 	fmt.Println(abc)
 	prtbyte(cabc)
-	fmt.Print(eabc)
+	fmt.Print("str=", eabc)
 	if cabc != nabc {
 		eabc1 := expandcosy(nabc)
 		if eabc != eabc1 {
@@ -191,7 +195,7 @@ func test_cosy() {
 		fmt.Println("!!! cosy does not match")
 		prtbyte(nabc)
 	}
-	fmt.Println("end of encodind/decoding")
+	fmt.Println("end of encoding/decoding")
 }
 
 /*
