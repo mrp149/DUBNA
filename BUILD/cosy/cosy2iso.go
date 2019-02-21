@@ -61,10 +61,11 @@ func makecosy(inp string) string {
 			fl++
 			continue
 		}
+
 		if fl != 0 {
 
 			if fl == 1 {
-				out[k] = byte(0201) // ' '  // it is a question
+				out[k] = byte(0201) // ' ' is packed in ISOTCOSY
 			} else {
 				out[k] = byte(0200 + fl)
 			}
