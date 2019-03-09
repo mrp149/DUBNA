@@ -8,11 +8,15 @@ import (
 
 const iso string = "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЫЬЭЮЯ"
 const asc string = "abwgdevzijklmnoprstufhc~{}yx|`q"
+const gst string = "aБbГДeЖЗИЙkЛmhoПpctУФХЦЧШЩЫЬЭЮЯ"
 
 var iso_r []rune = []rune(iso)
 var asc_r []rune = []rune(asc)
+var gst_r []rune = []rune(gst)
+
 var i2u = make(map[rune]rune, 100)
 var u2i = make(map[rune]rune, 100)
+var g2u = make(map[rune]rune, 100)
 
 func initmaps() {
 	if len(asc_r) != len(iso_r) {
@@ -21,6 +25,7 @@ func initmaps() {
 	for i := 0; i < len(asc_r); i++ {
 		i2u[asc_r[i]] = iso_r[i]
 		u2i[iso_r[i]] = asc_r[i]
+		g2u[iso_r[i]] = gst_r[i]
 	}
 }
 
@@ -31,6 +36,28 @@ func iso2utf(r rune) rune {
 		return '*'
 	}
 	return tr
+}
+
+func gst2iso(r rune) rune {
+	tr := g2u[r]
+	if tr == rune(0) {
+		fmt.Fprintf(os.Stderr, "unknown ISO symbol: %03o -> %03o\n", r, tr)
+		return '*'
+	}
+	return tr
+}
+
+func convgost(inp string) string {
+	var i int
+	str := []rune(inp)
+
+	for i = 0; i < len(str); i++ {
+		if g2u[str[i]] != 0 {
+			str[i] = g2u[str[i]]
+		}
+	}
+
+	return strings.ToUpper(string(str))
 }
 
 func test_i2u() {
