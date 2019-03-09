@@ -8,7 +8,7 @@ import (
 
 const iso string = "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЫЬЭЮЯ"
 const asc string = "abwgdevzijklmnoprstufhc~{}yx|`q"
-const gst string = "aБbГДeЖЗИЙkЛmhoПpctУФХЦЧШЩЫЬЭЮЯ"
+const gst string = "aБbГДeЖЗИЙkЛmhoПpctУФxЦЧШЩЫЬЭЮЯ"
 
 var iso_r []rune = []rune(iso)
 var asc_r []rune = []rune(asc)
