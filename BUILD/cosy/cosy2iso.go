@@ -226,7 +226,7 @@ func test_cosy() {
 	fmt.Println("end of encoding/decoding")
 }
 
-/*
+func consistency() {
 	cstr := ""
 	wc := 0
 	eof := 0
@@ -260,9 +260,9 @@ func test_cosy() {
 					fmt.Println("!!!!lost in conversion")
 					fmt.Print(estr1)
 				}
-					prtbyte(cstr)
-					fmt.Println("cosy does not match")
-					prtbyte(cstr1)
+				prtbyte(cstr)
+				fmt.Println("cosy does not match")
+				prtbyte(cstr1)
 			}
 
 			cstr = ""
@@ -272,4 +272,4 @@ func test_cosy() {
 			break
 		}
 	}
-*/
+}
