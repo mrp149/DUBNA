@@ -51,10 +51,21 @@ func convgost(inp string) string {
 	var i int
 	str := []rune(inp)
 
+	w := 0
 	for i = 0; i < len(str); i++ {
 		if g2u[str[i]] != 0 {
-			str[i] = g2u[str[i]]
+			r := g2u[str[i]]
+			if r == 'y' {
+				if w > 0 {
+					r = 'У'
+				}
+			}
+			if r > 127 {
+				w++
+			}
+			str[i] = r
 		}
+
 	}
 
 	return strings.ToUpper(string(str))
