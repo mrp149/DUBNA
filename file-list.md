@@ -94,7 +94,14 @@ Note: it is the same as dub_besm/dumba.ms
 	d_besm6/t.for
 	d_besm6/topc
 
-## deb_besm/ - тексты системы (for reference)
+## drums/ - копии системных барабанов
+	drums/README.md
+	drums/KT-SBOR-MAL.txt	- Инструкция из Соснового Бора
+	drums/workin20.bin	- барабан из Дубны
+	drums/CAMdrum20.bin	- барабан из Соснового Бора 
+
+
+## dub_besm/ - тексты системы (for reference)
 
 	dub_besm/dubna.dd	- диспетчер, но не очень ясно какой именно 
 	dub_besm/dubna.ms	- мониторка +  дин. загрузчик
