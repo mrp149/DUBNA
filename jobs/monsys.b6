@@ -1,0 +1,15 @@
+шифр 419999 зс5^
+лен 50(1200-ЗП)^
+лен 41(2048)^
+eeв1а3
+*name MonSys-2017
+*     no list
+*call putflag*
+5
+*ftn
+*read:50100
+*tcatalog
+*to perso:50000,77
+*end file
+``````
+еконец
