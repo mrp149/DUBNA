@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="420" viewBox="0 0 940 420">
+<rect width="940" height="420" fill="white"/>
+<rect x="20" y="40" width="180" height="340" fill="#f5f5f5" stroke="#999999" stroke-width="1.2" rx="3"/>
+<text x="110" y="75" font-family="Helvetica, Arial, sans-serif" font-size="18.7" fill="#333333" text-anchor="middle" font-weight="bold">console</text>
+<rect x="380" y="40" width="180" height="340" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.2" rx="3"/>
+<text x="470" y="75" font-family="Helvetica, Arial, sans-serif" font-size="18.7" fill="#333333" text-anchor="middle" font-weight="bold">DD</text>
+<rect x="740" y="40" width="180" height="340" fill="#d5e8d4" stroke="#82b366" stroke-width="1.2" rx="3"/>
+<text x="830" y="75" font-family="Helvetica, Arial, sans-serif" font-size="18.7" fill="#333333" text-anchor="middle" font-weight="bold">task Ш23(S)</text>
+<line x1="740" y1="125" x2="207.5" y2="125" stroke="#333333" stroke-width="1.2"/>
+<polygon points="202,125 208.45,122.27 208.45,127.73" fill="#333333" stroke="none" stroke-width="1"/>
+<text x="470" y="115" font-family="DejaVu Sans Mono, Menlo, Consolas, monospace" font-size="16.15" fill="#333333" text-anchor="middle">Ш23(S)-ПРОСМОТР МОЗУ-</text>
+<text x="470" y="145" font-family="Helvetica, Arial, sans-serif" font-size="15.3" fill="#808080" text-anchor="middle">Э76: text to the console</text>
+<line x1="200" y1="205" x2="372.5" y2="205" stroke="#333333" stroke-width="1.2"/>
+<polygon points="378,205 371.55,207.73 371.55,202.27" fill="#333333" stroke="none" stroke-width="1"/>
+<text x="290" y="195" font-family="DejaVu Sans Mono, Menlo, Consolas, monospace" font-size="16.15" fill="#333333" text-anchor="middle">1000SN</text>
+<rect x="400" y="180" width="140" height="50" fill="#fff2cc" stroke="#d6b656" stroke-width="1.2" rx="3"/>
+<text x="470" y="210.95" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#333333" text-anchor="middle">cell 101B</text>
+<line x1="560" y1="205" x2="732.5" y2="205" stroke="#333333" stroke-width="1.2"/>
+<polygon points="738,205 731.55,207.73 731.55,202.27" fill="#333333" stroke="none" stroke-width="1"/>
+<text x="650" y="195" font-family="DejaVu Sans Mono, Menlo, Consolas, monospace" font-size="16.15" fill="#333333" text-anchor="middle">1000</text>
+<text x="650" y="230" font-family="Helvetica, Arial, sans-serif" font-size="15.3" fill="#808080" text-anchor="middle">Э66 returns it</text>
+<line x1="200" y1="305" x2="372.5" y2="305" stroke="#333333" stroke-width="1.2"/>
+<polygon points="378,305 371.55,307.73 371.55,302.27" fill="#333333" stroke="none" stroke-width="1"/>
+<text x="290" y="295" font-family="DejaVu Sans Mono, Menlo, Consolas, monospace" font-size="16.15" fill="#333333" text-anchor="middle">S=text</text>
+<rect x="400" y="280" width="140" height="50" fill="#fff2cc" stroke="#d6b656" stroke-width="1.2" rx="3"/>
+<text x="470" y="310.95" font-family="Helvetica, Arial, sans-serif" font-size="17" fill="#333333" text-anchor="middle">telegram</text>
+<line x1="560" y1="305" x2="732.5" y2="305" stroke="#333333" stroke-width="1.2"/>
+<polygon points="738,305 731.55,307.73 731.55,302.27" fill="#333333" stroke="none" stroke-width="1"/>
+<text x="650" y="295" font-family="DejaVu Sans Mono, Menlo, Consolas, monospace" font-size="16.15" fill="#333333" text-anchor="middle">text</text>
+<text x="650" y="330" font-family="Helvetica, Arial, sans-serif" font-size="15.3" fill="#808080" text-anchor="middle">Э205 returns it</text>
+</svg>

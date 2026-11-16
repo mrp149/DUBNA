@@ -56,9 +56,12 @@ Terminology used everywhere:
     `МР`, `ИМР`), the console dialogue, errors, what is written on the tape.
   - `Monsys9_Tape.md` — layout of the system tape 9/MONSYS (MS zones, catalogs, static
     sections, libraries), how the MS is rebuilt from sources and what stays binary.
+  - `Service_Tasks.md` — the service tasks 11–76 of 5/D73LIB: how DD starts them (`NN/`),
+    the dialogue, and what each task does. Figures are SVG made by `docs/figures/*.py`
+    (`make` there; `svg.py` is the helper).
 
   The articles, except `Switch_Registers.md`, `Dubna_Commands.md`, `Boot_Process.md`,
-  `OS_Dubna_Tutorial.md`, `Formatting_Tapes.md` and `Monsys9_Tape.md` (written here), are copies from other BESM-6
+  `OS_Dubna_Tutorial.md`, `Formatting_Tapes.md`, `Monsys9_Tape.md` and `Service_Tasks.md` (written here), are copies from other BESM-6
   projects (besm6/simh, v7besm, c-compiler); a note under each title names the origin. Their "kernel" and "compiler" are those projects', and
   links to files outside `docs/` are absolute GitHub URLs. Keep it that way when adding more:
   no relative links to files that are not in this repo.

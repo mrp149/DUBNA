@@ -131,7 +131,7 @@ Multitype (tty26), from `BUILD/boot-run-tty26.txt`:
 
 | Order | Meaning |
 | --- | --- |
-| `NN/` | Start service task `NN`. `13/` is a known one; it replies `А Я ЗАНЯТА` if no slot is free. |
+| `NN/` | Start service task `NN`. `13/` is a known one; it replies `А Я ЗАНЯТА` if no slot is free. Each task is described in [Service_Tasks.md](Service_Tasks.md). |
 | `text/` | Pass `text` to the operator service task 75 ([7000](../besmdisp/macro67.dd1#L7000)). |
 | `Р` | Start the output task ВЫВОД (task 11), which drives the printers. It starts by itself at boot unless ТР2 bit 42 is set. |
 | `NNР` | Start ВЫВОД with parameter `NN`. |
