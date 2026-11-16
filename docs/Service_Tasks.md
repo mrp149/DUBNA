@@ -78,7 +78,7 @@ Cyrillic; the sources spell them with Latin lookalikes.
 ## Summary
 
 "Stub" means the task is replaced by an empty module in `tra-libs.dub`, so here it ends at
-once. Most of those need hardware that SIMH lacks.
+once; see [Stubbed tasks](#stubbed-tasks).
 
 | Task | Name | Purpose | Here |
 |---|---|---|---|
@@ -124,6 +124,62 @@ once. Most of those need hardware that SIMH lacks.
 | [74](#74--пакетный-ввод-jobs-from-cards) | ПАКЕТНЫЙ ВВОД | Read jobs from cards (order `ПВ`) | |
 | [75](#75--operator-service-orders) | — | Decode operator orders `text/` | |
 | [76](#76--инженерная-статистика) | ИНЖ. СТАТИСТИКА | Engineering statistics report | |
+
+## Stubbed tasks
+
+The job `newbsz` builds 5/D73LIB with the overlay loader:
+`*CALL OVERLAY:60000,77,NEW BSZ` and a list of all tasks
+([tra-libs.dub](../BUILD/tra-libs.dub)). Just before that, a small Madlen deck defines
+seven tasks as empty modules:
+
+```
+  task45:,name,
+  13,uj,
+  ,end,
+```
+
+`13,uj,` returns at once, so `45/` starts and ends without a word. The loader takes names
+defined in the job before it searches the libraries, so these modules hide the real ones
+on tape 247.
+
+**Why.** M. Popov added the stubs in 2017 without a note. Building the library without
+them shows why: the overlay loader stops at the first task with an unresolved name,
+`ОТСУТСТВУЕТ name` in its map, and the library is not written. Removing the stubs one
+at a time gives:
+
+| Task | Links? | What is missing | Cause |
+|---|---|---|---|
+| 45 | no | `METADR` | A typo in [task11.ts1:596](../besmtask/task11.ts1#L596): the function is documented and called as `METADR`, but its entry is spelled `ENTRY METARD`. |
+| 47 | no | `OPENTE`, `POSOUT`, `TEINP`, `TEINP1`, `CHINP1`, `TECLEA`, `CLOSTE` | Lost in compilation; see below. |
+| 57 | no | `PTCHEK` | Lost in compilation; see below. |
+| 50 | no | `LINK*R`, `LINK*W`, `ПОДКЛ*S` | The link drivers to the plotter computer are not in the archive. |
+| 51 | yes | — | Nothing missing. |
+| 70 | yes | — | Nothing missing. |
+| 71 | yes | — | Nothing missing. |
+
+**Lost in compilation.** In [task47.ts2:16997](../besmtask/task47.ts2#L16997) the
+Fortran subroutine `PTCHEK` follows a Madlen module directly.
+
+- **What should be there.** Elsewhere a `*FTN` card switches the compiler back to
+  Fortran in that case, as at [task11.ts1:925](../besmtask/task11.ts1#L925). Here the
+  card is missing.
+- **What happens.** When tape 247 is compiled (`mk-stl-src.sh`), Madlen takes the
+  Fortran as its own, prints `ОТСУТСТВУЕТ ИМЯ ПРОГРАММЫ` … `СКАНИРОВАНИЕ ПРЕКРАЩЕНО`, and
+  skips to the next module. In the listing `stl-base-src.list` this shows as a module
+  named `MEMENTO MORI`.
+- **What is lost.** The skip takes with it `PTCHEK` (task 57) and the next Madlen module
+  `POSOUT`, whose entries are the terminal routines of PANNO (task 47).
+
+**What it would take.**
+
+| Task | To build it | To make it useful |
+|---|---|---|
+| 45 | Fix the entry name | Needs a crash dump on a drum and a reference copy of the same DD version on `T9/MONSYS` |
+| 47 | Add the `*FTN` card | Needs a display terminal (ВДТ or 15ИЭ) |
+| 57 | Add the `*FTN` card | Needs paper tapes |
+| 50 | Not possible | The link drivers are lost |
+| 51 | Drop the stub | Needs a plotter, or a tape for the plot file |
+| 70, 71 | Drop the stub | Need the link lines to the small computers, which SIMH does not have |
 
 ## Output and cards
 
@@ -508,7 +564,7 @@ the comments.
 ### 45 — РАЗНИЦА, compare a dump with the system
 
 [task47.ts2:16720](../besmtask/task47.ts2#L16720), 1986; Fortran
-[DIFER](../besmtask/task11.ts1#L363). **Stub here.**
+[DIFER](../besmtask/task11.ts1#L363). **Stub here** ([why](#stubbed-tasks)).
 
 - **Purpose.** After a crash, DD saves its memory on a drum. This task compares that dump
   with the reference copy of OS version V on `T9/MONSYS` and prints the differences:
@@ -641,7 +697,7 @@ the comments.
 
 [task47.ts2:18146](../besmtask/task47.ts2#L18146); Fortran
 [MONITO](../besmtask/task11.ts1#L12). В. Ю. Веретенов 1986, Данилов and Дупин, Ленинград
-1987. **Stub here.**
+1987. **Stub here** ([why](#stubbed-tasks)).
 
 - **Start.** The order `PANNO` given at a display terminal (ВДТ or 15ИЭ).
 - **Screen.**
@@ -654,7 +710,7 @@ the comments.
 
 ### 50 — ГРАФИК, plot queue
 
-[task47.ts2:9708](../besmtask/task47.ts2#L9708), ЛВБ, 1980–81. **Stub here.**
+[task47.ts2:9708](../besmtask/task47.ts2#L9708), ЛВБ, 1980–81. **Stub here** ([why](#stubbed-tasks)).
 
 - **Purpose.** Sends plots from the plot catalog to a plotter computer over a link.
 - **Operator answers.** `nnn` shows plot nnn; the same with a prefix hands it out:
@@ -663,7 +719,7 @@ the comments.
 
 ### 51 — ВЫВОД ГРАФИКОВ, draw plots
 
-[task47.ts2:9936](../besmtask/task47.ts2#L9936), А. П. Сапожников, 1985. **Stub here.**
+[task47.ts2:9936](../besmtask/task47.ts2#L9936), А. П. Сапожников, 1985. **Stub here** ([why](#stubbed-tasks)).
 
 - **`N51/`** draws the plots from the output file. N is the scale.
   - Lists `ГРАФИКИ В ФАЙЛЕ ВЫВОДА:`.
@@ -675,7 +731,7 @@ the comments.
 
 ### 57 — paper tape check
 
-[task11.ts1:4857](../besmtask/task11.ts1#L4857). **Stub here.**
+[task11.ts1:4857](../besmtask/task11.ts1#L4857). **Stub here** ([why](#stubbed-tasks)).
 
 - **`57/`** checks a paper tape of control codes for the ADMAP stand.
   - It adds up the X, Y and aperture moves and checks they return to the start.
@@ -688,7 +744,7 @@ the comments.
 ### 70 — СВЯЗЬ, link with peripheral computers
 
 [task47.ts2:11943](../besmtask/task47.ts2#L11943), 1978. Started by the order `I`. **Stub
-here.**
+here** ([why](#stubbed-tasks)).
 
 - **Lines.** Serves 8 lines to small computers: the ЕС-1010 of ЛВТА and the labs.
 - **Requests.**
@@ -702,7 +758,7 @@ here.**
 
 ### 71 — ПРОТОКОЛ СВЯЗИ, link log
 
-[task47.ts2:13761](../besmtask/task47.ts2#L13761). **Stub here.**
+[task47.ts2:13761](../besmtask/task47.ts2#L13761). **Stub here** ([why](#stubbed-tasks)).
 
 - **Start.** `NN71/` copies the log of task 70 every NN seconds.
 - **When it prints.** It prints `СБОЙ СВЯЗИ - <reason>` and the exchange records:
