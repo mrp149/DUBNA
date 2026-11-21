@@ -4,9 +4,15 @@
 > also run in SIMH; for the others, all texts and behaviour come from reading the code.
 > Points the code does not settle are marked *(unclear)*.
 
-A **service task** (*служебная задача*) is a small program that the operator starts from the
-console. It formats tapes, lists queues, tests devices, prints logs and the like. The tasks
-are modules `TASK11` … `TASK76` of the task library **5/D73LIB**. The `newbsz` job in
+A **service task** (*служебная задача*) is a small program that the operator
+starts from the console.  Service Tasks are an extension of the basic
+operator commands built into the dispatcher.  These tasks can be a site
+specific and extend the capabilities of tools for operators and system
+engineers without recompiling Dispatcher.
+Tasks formats tapes, lists queues, tests devices, prints logs and the like.
+The tasks are modules `TASK11` … `TASK76` of the task library **5/D73LIB**.
+The `newbsz` job in
+
 [tra-libs.dub](../BUILD/tra-libs.dub) builds that library from
 [besmtask/task47.ts2](../besmtask/task47.ts2) (Madlen) and
 [besmtask/task11.ts1](../besmtask/task11.ts1) (mostly Fortran).
@@ -51,7 +57,7 @@ Cyrillic; the sources spell them with Latin lookalikes.
     - `МР`, `ИМР`: 62
     - `PANNO`: 47
     - `text/`: 75
-  - At boot, DD itself starts 11 (the spooler) and 10 (the planner).
+  - At boot, DD itself starts 11 - ВЫВОД (the spooler) and 10 - ПЛАНИРОВЩИК (the planner).
 
 ## Talking to a task
 
@@ -72,7 +78,7 @@ Cyrillic; the sources spell them with Latin lookalikes.
   printer through the spooler.
 - **Key words.** Several tasks guard dangerous work behind a key, such as register
   1 = 425, ТР3 low bits = 71717, or ТР3 bits 48–43 equal to the device number. Without
-  the key they refuse with a rude remark: `РУКИ ПРОЧЬ!`, `ЭТО БЕЗНРАВСТВЕННО !`,
+  the key they refuse with a "warning" remark: `РУКИ ПРОЧЬ!`, `ЭТО БЕЗНРАВСТВЕННО !`,
   `НЕ ПОЛОЖЕНО - НЕ ЛЕЗЬ!`.
 
 ## Summary
@@ -233,7 +239,7 @@ tape and a BESM-6 tape file. Answers are lines `L=text`.
 - **After each copy.** It answers `O'KAY` and asks `ПЕРЕПИСЬ?` again.
 - **Errors.**
   - `ЧУШЬ!`: a bad answer.
-  - `МФ НЕ ЕС!` and `РЕЖИМ МФ!`: the drive is not usable.
+  - `МФ НЕ ЕС!` and `РЕЖИМ МФ!`: the drive is not usable or bad read/write mode.
   - `ТАК НЕЛЬЗЯ!`: the direction changed after a drive was chosen; the task ends.
   - `НЕТЕКСТОВАЯ ИНФОРМАЦИЯ!`: the data is not text.
 
@@ -244,7 +250,7 @@ tape and a BESM-6 tape file. Answers are lines `L=text`.
 - **Purpose.** Writes listings from the output file to an ЕС tape that has a catalog.
 - **`РЕЖИМ?`**: answer `O` to append to a written tape, or `N` to start a new one. `D` ends.
   - Four digits before the letter give the first and last listing. The exact meaning of
-    those digits is *(unclear)*.
+    those digits refers to the first and last numbers of listings in the spooled output.
 - **`МФ РАЗГРУЗКИ?`**: the ЕС drive.
 - **Errors.** `ОШ. ПРИКАЗ!`, `МАГНИТОФОН НЕ ЕС!`, `КАТАЛОГ ИСПОРЧЕН!`, `КАТАЛОГ ПОЛН!`.
 
@@ -259,7 +265,7 @@ tape and a BESM-6 tape file. Answers are lines `L=text`.
 - **Console.** `УВВК-ПИ(Н)` at the start, `УВВК-ПИ(К)` at the end.
 - **Too long.** `БОЛЬШАЯ КОЛОДА`.
 
-### 26 — РАСП. П/К, list cards or write them to a file
+### 26 — РАСП. П/К, prints the deck in the reader or write them to a file
 
 [task47.ts2:4522](../besmtask/task47.ts2#L4522)
 
@@ -271,7 +277,7 @@ tape and a BESM-6 tape file. Answers are lines `L=text`.
   - It asks `ЛЕНТА/ФАЙЛ(ЗОНА) :` and ends the file with a `*READ OLD` card.
   - Report: `ЗАПИСАНО nnn ЗОН.`, and `НЕ ВВ:nn,СМ:nn` if some cards were not taken.
 
-### 40 — ПЕРФОРАЦИЯ, punch from tape 6/PUNOUT
+### 40 — ПЕРФОРАЦИЯ, punch from tape 6/PUNOUT (the spooled punch jobs from a batch run)
 
 [task47.ts2:8750](../besmtask/task47.ts2#L8750)
 
@@ -291,7 +297,7 @@ tape and a BESM-6 tape file. Answers are lines `L=text`.
   `ВВД0:<шифр>`.
 - **Dialogue.** None.
 
-### 74 — ПАКЕТНЫЙ ВВОД, jobs from cards
+### 74 — ПАКЕТНЫЙ ВВОД, Prepare BATCH input from a card reader.
 
 [task47.ts2:14082](../besmtask/task47.ts2#L14082), Петров, 1976. Started by the order `ПВ`.
 
@@ -301,7 +307,7 @@ tape and a BESM-6 tape file. Answers are lines `L=text`.
 - **Errors.** `ОШ.ПАСП.-`, `НЕ ВВ.-`, `КОНЕЦ ВВОДА`.
 - **Without `*NAME`.** A deck without `*NAME` is skipped up to its end-of-deck card.
 
-### 73 — ПАКЕТНЫЙ ВВОД (МЛ), jobs from an ЕС tape
+### 73 — ПАКЕТНЫЙ ВВОД (МЛ), Prepare BATCH input from an ЕС tape
 
 [task47.ts2:13861](../besmtask/task47.ts2#L13861)
 
@@ -412,7 +418,7 @@ the comments.
 
 ## Tapes, disks and drums
 
-### 27 — КАТАЛОГ МД, disk catalog
+### 27 — КАТАЛОГ МД, Prints disk catalog
 
 [task47.ts2:4770](../besmtask/task47.ts2#L4770)
 
@@ -423,7 +429,7 @@ the comments.
   owner, then every file with its zones and access: `R`, `W`, `ОБЩИЙ`, owners.
 - **End.** `.N`.
 
-### 30 — ПОДГОТОВКА МЛ, name a tape
+### 30 — ПОДГОТОВКА МЛ, Format and Label (Named) magnetic tapes
 
 [task47.ts2:5109](../besmtask/task47.ts2#L5109) ("instead of TAPENAM")
 
@@ -442,7 +448,7 @@ the comments.
   - The confirmation `bbbb/NAME(zzzz)!`; an empty answer accepts.
 - **End.** `ИМЯ НА МЛ - bbbb/NAME(…)`.
 
-### 31 — РАЗМЕТКА МД, format a disk pack
+### 31 — РАЗМЕТКА МД, Format a disk pack
 
 [task47.ts2:5492](../besmtask/task47.ts2#L5492)
 
@@ -475,7 +481,7 @@ the comments.
 
 - **End.** `-ПЕРЕПИСАНО!` or `-СРАВНИЛОСЬ!`, or `ПЛОХО <zone>` on a mismatch.
 
-### 36 — who wrote a tape or disk
+### 36 — Who wrote a tape or disk, decodes information from zones.
 
 [task47.ts2:7453](../besmtask/task47.ts2#L7453), А. П. Сапожников, 1982.
 
@@ -495,7 +501,7 @@ the comments.
 - **Bad tracks.** Retried 4 times. Each one left is printed with the file it belongs to.
 - **End.** `ПЕРЕПИСАНО!`.
 
-### 62 — РАЗМЕТКА, format a tape
+### 62 — РАЗМЕТКА, format a BESM-6 tape
 
 [task47.ts2:10871](../besmtask/task47.ts2#L10871). See
 [Formatting_Tapes.md](Formatting_Tapes.md).
@@ -513,7 +519,7 @@ the comments.
   | 6 | D73STA |
   | 7 | ЦЫПЦЫП |
 
-### 63 — ПРОСМОТР МЛ, look at a tape
+### 63 — ПРОСМОТР МЛ, look at a tape, this is the analog of whatis
 
 [task47.ts2:11546](../besmtask/task47.ts2#L11546), М. Ю. Попов.
 
@@ -548,7 +554,7 @@ the comments.
 - **Work.** Patches the dispatcher, the punch tables and LOADLIBR on the drum.
 - **Result.** `МС+++` if all three were patched.
 
-### 42 — ПРОСМОТР МОЗУ, view memory
+### 42 — ПРОСМОТР МОЗУ, dumps system memory on console
 
 [task47.ts2:8861](../besmtask/task47.ts2#L8861); the name mode was added by В. Файн in
 1982.
@@ -561,7 +567,7 @@ the comments.
   - Questions: `ДАЙ ИМЯ`, `С КАКОГО ЭЛЕМЕНТА?`, `СКОЛЬКО?`, `ПРОДОЛЖИМ? (Y/N)`.
   - `442/` also prints a protocol.
 
-### 45 — РАЗНИЦА, compare a dump with the system
+### 45 — РАЗНИЦА, compare a dump with the system in a troubleshooting
 
 [task47.ts2:16720](../besmtask/task47.ts2#L16720), 1986; Fortran
 [DIFER](../besmtask/task11.ts1#L363). **Stub here** ([why](#stubbed-tasks)).
@@ -593,7 +599,7 @@ the comments.
   - The task-75 orders `ВРМ`, `ВЗ`, `СЗ`, `ТЗ` and `МЗ` call this task too.
 - **Statistics closed.** It prints `ИНЖ. СТАТИСТИКА ЗАКРЫТА` first (seen in SIMH).
 
-### 61 — DAY-FILE
+### 61 — DAY-FILE, Prints the system statistics file.
 
 [task47.ts2:10573](../besmtask/task47.ts2#L10573)
 
@@ -626,7 +632,7 @@ the comments.
   ПОТОК: НЕТ!
   ```
 
-### 66 — resources of queued jobs
+### 66 — Prints resources of queued BATCH jobs
 
 [task47.ts2:11738](../besmtask/task47.ts2#L11738), Б. Б. Сахаров, 1979.
 
@@ -639,7 +645,7 @@ the comments.
 
 [task47.ts2:11928](../besmtask/task47.ts2#L11928), М. Ю. Попов.
 
-- **Purpose.** The server of the screen editor ELINE: it serves `ЭР-text` lines from the
+- **Purpose.** To initiate Non-Resident portion of the screen editor ELINE: it serves `ЭР-text` lines from the
   terminals.
 - **Stop.** `SCSTOP`.
 
@@ -671,7 +677,7 @@ the comments.
 | `МЗ/`, `ТЗ/` | Batch or terminal jobs with surnames (task 60) |
 | `ТФЗ/` | Asks `УКАЗАТЕЛЬ?` (a disk track), answers `ФАЙЛ: name ЗОНА nnnn` |
 
-### 76 — ИНЖЕНЕРНАЯ СТАТИСТИКА
+### 76 — ИНЖЕНЕРНАЯ СТАТИСТИКА, Prepare and prints the engineering statistic report
 
 [task47.ts2:14194](../besmtask/task47.ts2#L14194)
 
